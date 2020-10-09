@@ -1,0 +1,66 @@
+import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
+import { UserService } from '../../services/user.service';
+import { Role } from '../../enum/Role';
+
+
+
+@Component({
+    selector: 'app-login',
+    templateUrl: './login.component.html',
+    styleUrls: ['./login.component.css']
+})
+export class LoginComponent implements OnInit {
+
+    isInvalid: boolean;
+    isLogout: boolean;
+    submitted = false;
+    model: any = {
+        username: '',
+        password: '',
+        remembered: false
+    };
+
+    returnUrl = '/';
+
+    constructor(private userService: UserService,
+        private router: Router,
+        private route: ActivatedRoute) {
+    }
+
+    ngOnInit() {
+        let params = this.route.snapshot.queryParamMap;
+        this.isLogout = params.has('logout');
+        this.returnUrl = params.get('returnUrl');
+    }
+
+    onSubmit() {
+        this.submitted = true;
+        this.userService.login(this.model).subscribe(
+            user => {
+                if (user) {
+                    if (user.role != Role.Customer) {
+
+                        this.returnUrl = "dashboard";
+                    }
+
+                    this.router.navigateByUrl(this.returnUrl);
+                    // this.router.navigate(['', { outlets: { rightPane: 'dashboard' }, }], { skipLocationChange: true })
+                } else {
+                    this.isLogout = false;
+                    this.isInvalid = true;
+                }
+
+            }
+        );
+    }
+
+    fillLoginFields(u, p) {
+        this.model.username = u;
+        this.model.password = p;
+        this.onSubmit();
+    }
+}
+
+
+

@@ -1,0 +1,125 @@
+.signUpPage {
+	position: absolute;
+	/*height: calc(100% - 80px);*/
+	height: 100%;
+	top:80px;
+	background-color: #0178d5;
+}
+
+.signUpContainer {
+    width: 420px;
+	background-color:white;
+	border-radius: 10px;
+    margin: 3% auto;
+    padding: 15px 10px 10px 10px;
+	box-shadow: 4px 2px 16px #000000;
+}
+
+.SignUpLogo {
+	width:32%;
+	margin-left:15px;
+}
+
+.SignUpCreateFormField {
+    width: 100%;
+	border: 2px solid;
+	border-radius: 1rem;
+	padding-bottom: 5px;
+}
+
+.SignUpCreateText {
+	text-align: center;
+    padding: 10px 0px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.SignUpCreateInput {
+	padding: 5px 15px;
+	width:100%;
+}
+
+.SignUpCreateInput >.form-group >input{
+	border-radius: 20px;
+	height: 35px;
+    outline: none;
+    border: 1.5px solid;
+    padding: 5px 15px;
+}
+
+.SignUpCreateInput >.form-group >input:focus {
+	border: 1px solid #0178d5;
+}
+
+.InputError {
+	color: red;
+	font-size: 13px;
+	margin-left: 5px;
+}
+
+.SignUpInputField {
+	width:100%;
+}
+
+.SignUpSelectField {
+	padding: 6px 5px;
+	width: 22%;
+	height: 35px;
+	display: inline;
+	border-radius: 20px;
+	outline: none;
+}
+
+.SignUpSelectField:focus , .SignUpSelectField >option {
+	border: 1px solid #0178d5;
+}
+
+.SignUpPhoneNum {
+	width: 74%;
+	margin-left:3%;
+	display: inline;
+}
+
+.SignUpButton {
+	border-radius: 2rem;
+	color:white;
+	position:relative;
+}
+
+.SignUpButton >button{
+	background-color: #022a4f;
+	width:125px;
+	margin-left:116px;
+    padding: 7px 24px;
+	border:none;
+	border-radius: 2rem;
+	outline:none;
+	color:white;
+}
+
+.SignUpOr {
+	text-align:center;
+}
+
+.SignUpGoogleandFB {
+	padding: 0px 122px;
+}
+.SignUpGoogleandFB >img {
+	width: 50px;
+	margin-right:10px;
+}
+
+.SignUpSignInLink {
+	text-align:center;
+	padding-top: 5px;
+}
+
+.SignUpSignInLink >a:hover { 
+	outline:none;
+	text-decoration:none;
+}
+
+.SignUpSignInLink >a:focus { 
+	outline:none;
+	text-decoration:none;
+}

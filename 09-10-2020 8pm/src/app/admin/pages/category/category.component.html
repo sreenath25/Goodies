@@ -1,0 +1,51 @@
+
+<div class="col-xl-12">
+    <!-- <form [formGroup]="categoryForm" (ngSubmit)="addOrEditCategory()"  role="form">
+        <div class="form-group">
+            <label for="name">Name</label>&nbsp;
+            <input type="text" class="form-control" name="name" id="name"
+            formControlName="name"
+            required>
+        </div>
+        <div class="form-group">
+            <label for="description">Description</label>&nbsp;
+            <input type="text" class="form-control" name="description" id="description"
+            formControlName="description"
+            required>
+        </div>
+        <div class="form-group">
+            <label for="category">Category</label>&nbsp;
+            <select class="form-control" id="category" name="category" 
+            formControlName="category" #category>
+                 <option value="">Select Category</option>
+                <option *ngFor="let category of productService.categories" [ngValue]="category">{{ category }}</option>
+            </select>
+        </div>
+        <div class="form-group" *ngIf="productForm.get('category').value==='Books'">
+            <label for="author">Author</label>&nbsp;
+            <input type="text" class="form-control" name="author" id="author" 
+            formControlName="author">
+        </div>
+        <div class="form-group">
+            <label for="price">Price</label>&nbsp;
+            <input type="number" class="form-control" name="price" id="price" 
+            formControlName="price">
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary" >{{ editMode ? 'Update' : 'Add' }}</button>
+        </div>
+    </form> -->
+    <form #categoryForm="ngForm" (ngSubmit)="addOrEditCategory()">
+        <div class="form-group">
+            <label for="name">Name</label>&nbsp;
+            <input type="text" class="form-control" name="name" id="name" [(ngModel)]="category.categoryName">
+        </div>
+        <div class="form-group">
+            <label for="category">Description/Type</label>&nbsp;
+            <input type="number" class="form-control" name="description" id="description" [(ngModel)]="category.categoryType">
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary" >{{ editMode ? 'Update' : 'Add' }}</button>
+        </div>
+    </form>
+</div>

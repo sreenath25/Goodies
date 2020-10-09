@@ -1,0 +1,234 @@
+html, body {
+	height: 100%;
+	margin: 0px;
+	font-family: "Roboto";
+    font-style: normal;
+    font-size: 15px;
+}
+
+.container-fluid {
+    height: 100%;
+}
+
+.pl-100{
+	padding-left:100px;
+}
+
+.mainFrameLogo {
+	height: 30px;
+    margin-left: 60px;
+}
+
+.navbar{
+    background-color: #0178d5;
+    height: 50px;
+    width:100%;
+	border-radius:0;
+}
+
+.dropbtn {
+  background-color: inherit;
+  color: white;
+  font-size: 13px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropdown-content:hover {display: block;}
+
+.navbarImg {
+	height: 14px;
+    width: 14px;
+}
+
+.navigationbar {
+	margin-left:250px;
+	height:44px;
+	padding:7px 60px 8px 21px;
+	border-bottom: 1px solid lightgrey;
+}
+
+.navigationbar >div:first-child >div{
+    display: inline;
+	margin-left:10px;
+}
+
+.navigationbar >div:nth-child(2) >input{
+	width:100%;
+	outline:none;
+	border-radius: 7px;
+    border: 1px solid #00a6ff;
+	padding: 4px 0px 2px 25px;
+}
+
+.navigationbar >div:nth-child(2) >img{
+	position: absolute;
+    height: 20px;
+    margin-left: -9%;
+    margin-top: 5px;
+}
+
+.navigationbar >div:nth-child(3) >div {
+	float:right;
+	color:#00a6ff;
+	font-size:13px;
+	margin-top:5px;
+}
+.navigationbar >div:nth-child(3) >div >img{
+	height: 8px;
+    margin-top: -3px;
+    margin-left: 5PX;
+}
+
+.sidebarNavigation {
+	z-index: 1;
+    width: 250px;
+    height: calc(100% - 50px);
+    position: fixed;
+    top: 50px;
+    left: 0;
+    background-color: #022a4f;
+}
+
+.sidebarOptions {
+    color: #adadad;
+	padding:1.5rem 0rem;
+    border-bottom: solid 1px #0178d5;
+    -webkit-transition: color 0.2s ease;
+    transition: color 0.2s ease;
+	text-decoration:none;
+}
+
+.sidebarImg >img {
+	height:30px;
+}
+
+.sidebarImg >img:first-child{
+	width:75px;
+	min-width:75px;
+}
+
+.sidebarOptions >.sidebarImg {
+	display:inline;
+}
+
+.sidebarOptions >.glyphicon{
+	width:75px;
+	text-align: center;
+}
+
+.sidebarOptions >a{
+	color:white;
+	display:inline;
+	text-align: center;
+}
+
+.sidebarOptions:hover >a{
+	color:white;
+	display:inline;
+	text-decoration:none;
+}
+
+.sidebarOptions:hover {
+	color:white;
+	background-color: #0178d5;
+	text-decoration:none;
+}
+
+.sidebarOptions >a >span{
+	float:right;
+	margin-right:30px;
+}
+
+
+
+.leftNavigation >li:hover >.sidebarOptions >.sidebarImg >.onhoverVisible{
+	display:inline !important;
+	width:75px;
+}
+
+.leftNavigation >li:hover >.sidebarOptions >.sidebarImg >.onhoverInvisible{
+	display:none;
+}
+
+.leftNavigation >li .submenuLeftNavigation {
+	display:none;
+}
+
+.leftNavigation >li {
+	cursor:pointer;
+}
+
+.submenuLeftNavigation >li {
+	padding: 0.8rem 1rem 0.8rem 5rem;
+    border-bottom: solid 1px #395673;
+}
+
+.submenuLeftNavigation >li  a {
+	color: #adadad;
+	text-decoration:none;
+}
+.submenuLeftNavigation >li:hover  a {
+	color:white;
+}
+
+.activeSidebar >.sidebarOptions {
+	background-color: #0178d5;
+}
+
+.navigationbarBack >img {
+	height:16px;
+	background-color: white;
+    width: 24px;
+}
+
+
+.navigationbarBack {
+	background-color: white;
+    outline: none;
+    border: 1px solid #00a6ff;
+    border-radius: 4px 0px 0px 4px;
+}
+
+.navigationbarDownArrow {
+	background-color: white;
+    border-radius: 0px 4px 4px 0px;
+    border: 1px solid #00a6ff;
+    outline: none;
+	margin-left:-5px;
+}
+
+
+.navigationbarDownArrow >img {
+	height:8px;
+	background-color: white;
+    width: 14px;
+}
+
+.route-panel {
+	flex: 1 1 auto;
+	padding: 20px;
+}

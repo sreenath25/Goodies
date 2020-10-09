@@ -1,0 +1,59 @@
+<div class="container-fluid LoginPage">
+
+    <form #form='ngForm' (ngSubmit)="onSubmit()">
+        <div class="LoginContainer ">
+            <div class="LoginLogo">
+                <img src="./assets/images/logo.svg" alt="Goodies Shop">
+            </div>
+            <div class="LoginHeader">
+                Login
+            </div>
+            <div class="alert alert-danger p-0 mb-0" *ngIf="isInvalid">
+                Invalid username and password.
+            </div>
+            <div class="alert alert-info p-0 mb-0" *ngIf="isLogout">
+                You have been logged out.
+            </div>
+            <div class="LoginInput">
+                <div class="form-group">
+                    <input type="text" class="form-control form-control-lg" id="email" name="email"
+                        placeholder="Enter email" required autofocus [(ngModel)]="model.username" #email="ngModel"
+                        autocomplete="email">
+                    <div [hidden]="email.valid || email.pristine" class="alert alert-danger loginErrorDsiplay">
+                        * Email is required
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <input type="password" class="form-control form-control-lg" id="password" name="password"
+                        autocomplete="password" placeholder="Password" required [(ngModel)]="model.password"
+                        #password='ngModel'>
+                    <div [hidden]="password.valid || password.pristine" class="alert alert-danger loginErrorDsiplay">
+                        * Password is required
+                    </div>
+                </div>
+
+                <div class="form-group LoginRememberMe ">
+                    <div>
+                        <input type="checkbox" id="remember_me" name="remember-me" [(ngModel)]="model.remembered">
+                        <label for="remember_me" class="inline">Remember me</label>
+                    </div>
+                </div>
+                <div class="form-group LoginSubmit">
+                    <button [disabled]="!form.form.valid" type="submit" class="btn btn-lg btn-primary btn-block">Sign
+                        In</button>
+                </div>
+                <div class="LoginForgotPassword text-center">
+                    Forgot Password ?
+                </div>
+                <div class="LoginNewUser text-center">
+                    New User ?
+                    <a routerLink="/auth/signup">Sign Up</a>
+                </div>
+            </div>
+
+        </div>
+
+
+    </form>
+</div>

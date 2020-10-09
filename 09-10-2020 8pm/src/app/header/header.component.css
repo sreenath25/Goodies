@@ -1,0 +1,286 @@
+
+.mainFrameBar {
+    background-color: #0178d5;
+    height: 50px;
+    width:100%;
+	border-radius:0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.mainFrameLogo {
+	display: inline-block;
+    left: 0;
+    position: absolute;
+}
+
+.mainFrameLogoImg {
+	height: 30px;
+    margin-left: 60px;
+}
+
+.mainFrameSearchBar {
+	width: 40%;
+    padding: 10px 0px;
+    position: relative;
+	margin-left:25%;
+}
+
+.mainFrameSearchBar >img {
+	height: 20px;
+    width: 20px;
+    top: 15px;
+    position: absolute;
+    right: 21px;
+}
+
+.mainFrameSearchBar >input {
+	width:100%;
+	outline:none;
+	border-radius: 7px;
+    border: 1px solid #00a6ff;
+	padding: 4px 0px 2px 25px;
+}
+
+.mainFrameRightSide {
+	position: absolute;
+    float: right;
+    right: 60px
+}
+
+.mainFrameUserInfo {
+	position: absolute;
+	/* display: inline-block; */
+	display: none;
+	height: 50px;
+	top: 5px;
+	right:250px;
+	cursor:pointer;
+}
+
+.mainFrameUserLink {
+	 color: white;
+	 position: relative;
+}
+
+.mainFrameUserLink:hover {
+	outline: none;
+	color: white;
+	text-decoration: none;
+}
+
+.mainFrameUserLink >img{
+	display: inline-block;
+	height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.mainFrameUserName {
+	display: inline-block;
+	position: absolute;
+	padding-left: 10px;
+}
+
+.mainFrameUserName >div{
+	text-align:center;
+}
+
+.mainFrameUserNameElipsis {
+	max-width: 100px;
+	white-space: nowrap; 
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.mainFrameButtonLink {
+  background-color: inherit;
+  color: white;
+  border: none;
+  outline:none;
+}
+
+.mainFrameButtonLink:hover {
+	outline:none;
+	color:white;
+	text-decoration:none;
+}
+
+.mainFrameLoginButton {
+	position: absolute;
+	display: inline-block;
+	/* display: none; */
+	height: 30px;
+	top: 10px;
+	right: 150px;
+    border: 2px solid white;
+    background-color: white;
+}
+
+.mainFrameLoginButtonLink {
+	color:#0178d5;
+	padding: 0px 40px;
+    text-align: center;
+    vertical-align: middle;
+	outline: none;
+	border: none;
+    text-decoration: none;
+}
+
+.mainFrameLoginButtonLink:hover {
+	outline:none;
+	text-decoration:none;
+}
+
+.mainFrameCartSpace {
+	position: relative;
+    display: inline-block;
+    margin: 0px 10px;
+    font-size: 20px;
+    height: 50px;
+	width: 120px;
+    padding: 10px 20px;
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+}
+
+.mainFrameImg {
+	height: 14px;
+    width: 14px;
+}
+
+.mainFrameCartImg {
+	height: 25px;
+    width: 25px;
+	margin-top: 4px;
+}
+
+.mainFrameCartCount {
+	position: absolute;
+    top: -3px;
+    width: 23px;
+    height: 23px;
+    padding-left: 6px;
+    padding-top: 1px;
+    background-color: red;
+    border: 1.5px solid white;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.mainFrameDropdown {
+	position: absolute;
+	display:none;
+    margin-top: 47px;
+	width: 240px;
+    background-color: white;
+    border: 1px solid lightgrey;
+	right:130px;
+	box-shadow: 2px 2px 4px grey;
+}
+
+.mainFrameDropdown:hover {
+	display: block !important;
+}
+
+.mainFrameDropdown::before {
+	display: inline-block;
+    margin-left: .255em;
+    vertical-align: .255em;
+    content: "";
+    border-top: 0em solid;
+	border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #fff;
+	position: absolute;
+    top: -10px;
+    right: 50%;
+}
+
+.mainFrameDropdownOptions {
+	width: 240px;
+	padding: 8px 0px 8px 15px;
+	border-bottom: 1px solid lightgrey;
+}
+
+.mainFrameDropdownOptions:not(:first-child) {
+	cursor:pointer;
+}
+
+.mainFrameDropdownOptions:hover, .mainFrameDropdownOptions:hover >.mainFrameDropdownSignUp{
+	background-color: #0178d5;
+	color: white;
+}
+
+.mainFrameDropdownSignUp {
+	color: #0178d5;
+	cursor:pointer;
+}
+
+.categoryBar {
+	height: 30px;
+	width: 100%;
+	padding-left: 10%;
+    padding-right: 10%;
+	border-bottom: 1px solid lightgrey;
+}
+
+.categoryBarOptions {
+	margin-top: 4px;
+	height:30px;
+	display: inline-block;
+	width: 19%;
+	cursor: pointer;
+}
+
+.categoryBarOptionImg {
+	height:15px;
+	width:15px;
+}
+
+.categoryViewPage {
+	display:none;
+	position: absolute;
+    margin-top: 80px;
+    margin-left: 10%;
+	padding: 10px 20px;
+    width: 80%;
+    border: 1px solid lightgrey;
+	box-shadow: 2px 2px 4px grey;
+}
+
+.categoryViewPage:hover {
+	display:block !important;
+}
+
+.categoryViewPageSections {
+	display: inline-block;
+	width: 24%;
+}
+
+.categoryViewPageCategorySections {
+	padding: 10px 20px;
+}
+
+.categoryViewPageCategorySectionHeader {
+	font-weight: 900;
+}
+
+.categoryViewPageCategorySections >a {
+	color: #484848;
+	padding: 2px 0px;
+	display: block;
+	cursor: pointer;
+}
+
+.categoryViewPageCategorySections >a:hover {
+	color: #484848;
+	outline: none;
+	text-decoration: none;
+}
+
+.categoryViewPageCategorySections >a:focus {
+	outline: none;
+	text-decoration: none;
+}

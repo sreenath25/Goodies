@@ -1,0 +1,117 @@
+html, body {
+	height: 100%;
+	margin: 0px;
+	background-color: #0178d5;
+	font-family: "Roboto";
+    font-weight: 400;
+    font-style: normal;
+}
+
+.container-fluid {
+    height: 100%;
+}
+
+.LoginPage {
+	background-color: #0178d5;
+	position: absolute;
+}
+
+.LoginContainer {
+	height: 460px;
+    width: 460px;
+	background-color:white;
+	border-radius: 50%;
+    margin: 7% auto;
+    padding: 30px 60px 0px 60px;
+	border-width:5px;  
+    border-style:solid;
+	border-color:#3fa9f5;
+}
+
+.LoginLogo {
+	padding: 20px 10px 0px 10px;
+}
+
+.LoginLogo >img{
+	width: 53%;
+    margin-left: 75px;
+}
+
+.LoginHeader {
+	font-weight: 700;
+    font-size: 20px;
+	text-align: center;
+	padding: 10px 0px;
+	color: #022a4f;
+}
+
+.LoginInput {
+	margin-left:25px;
+	padding: 6px 0px;
+}
+
+.LoginInput >div {
+	margin-bottom: 5px;
+}
+
+.LoginInput >div >input {
+	outline:none;
+	margin: 6px  5px;
+	height: 36px;
+	border-radius: 1.5rem;
+    border: 1px solid;
+	padding: 4px 0px 2px 15px;
+	font-size: 16px;
+}
+
+.loginErrorDsiplay {
+	background-color: white;
+    border: 0;
+    margin: 0px 0px 14px 0px;
+    padding: 0px 0px 0px 16px;
+    height: 10px;
+    color: red;
+    font-size: 13px;
+}
+
+.LoginRememberMe {
+	margin-left: 15px;
+}
+
+.LoginSubmit >button{
+	background-color: #022a4f;
+	padding: 6px 24px;
+	width: 40%;
+	margin: auto;
+    opacity: 1;
+    font-size: 16px;
+	border:none;
+	border-radius: 2rem;
+	outline:none;
+	color:white;
+}
+
+.LoginForgotPassword {
+	color:#00a6ff;
+	text-align: center;
+	font-size: 15px;
+	cursor: pointer;
+}
+
+.LoginNewUser {
+	font-size: 15px;
+}
+
+.LoginNewUser >a {
+	color:#00a6ff;
+	outline: none;
+	text-decoration: none;
+}
+
+.LoginNewUser >a:hover{
+	color:#00a6ff;
+}
+
+.LoginNewUser >a:focus{
+	color:#00a6ff;
+}

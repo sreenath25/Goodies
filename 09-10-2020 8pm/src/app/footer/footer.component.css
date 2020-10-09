@@ -1,0 +1,30 @@
+
+.mainFrameFooter {
+	position:fixed;
+	background-color: #0178d5;
+	width:98%;
+    margin-left: 1%;
+	padding: 10px 0px 0px 45%;
+    height: 50px;
+    bottom: 0;
+	opacity: 80%;
+}
+
+.mainFrameFooter >div >img {
+	height: 25px;
+    margin-right: 10px;
+}
+
+.mainFrameFooter >div >footer {
+	display: inline;
+    color: white;
+}
+
+.mainFrameFooterCloseButton {
+	display: inline-block;
+	position:absolute;
+	border:none;
+	outline:none;
+	right: 2px;
+    top: 2px;
+}

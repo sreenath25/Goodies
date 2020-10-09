@@ -1,0 +1,16 @@
+**********************************************************************************
+<div class="col-xl-8">
+    <div class="row row-cols-1 row-cols-md-4">
+      <div class="col-md-3" style="padding-bottom: 15px;" *ngFor="let category of categories">
+        <div class="card" style="cursor: pointer;" (click)="goToCategory(category.categoryId)">
+          <!-- <img src="../../../assets/images/female.png" 
+          class="card-img-top" width="200px" height="200px" alt="..."> -->
+          <div class="card-body" >
+            <h5 #title class="card-title">{{ category.categoryName}}</h5>
+            <p class="card-text">{{ category.categoryId }}</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
