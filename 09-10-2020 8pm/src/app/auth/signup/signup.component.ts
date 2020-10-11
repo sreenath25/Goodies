@@ -19,6 +19,7 @@ export class SignupComponent implements OnInit {
   // registerForm: FormGroup;
 
   // exceptionMessage : ExceptionMessage = new ExceptionMessage();
+  submitted = false;
 
   characterCountLeft$;
   maxCharCount = 280;
@@ -51,6 +52,7 @@ export class SignupComponent implements OnInit {
   }
 
   onSubmit() {
+    this.submitted= true;
     console.log(this.registerForm.value);
     if (false) {
       return;

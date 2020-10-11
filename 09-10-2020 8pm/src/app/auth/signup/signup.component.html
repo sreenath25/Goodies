@@ -11,54 +11,54 @@
                 <div class="SignUpCreateInput">
                     <div class="form-group">
                         <input formControlName="name" type="text" class="form-control form-control-lg SignUpInputField"
-                            id="name" name="name" autofocus placeholder="Your Name">
-                        <small class="form-text text-danger"
-                            *ngIf="registerForm.controls.name.touched && registerForm.controls.name.errors.required">
-                            Please enter Name.!
-                        </small>
+                            autofocus placeholder="Your Name" [ngClass]="{ 'is-invalid': submitted && f.name.errors }">
+                        <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                            <div *ngIf="f.name.errors.required">Name is required</div>
+                        </div>
                     </div>
                     <div class="form-group">
-                        <select formControlName="countryCode" class="SignUpSelectField OptionsFontSize" name="country"
-                            id="country">
-                            <option value="India">IN +91</option>
+                        <select formControlName="countryCode" class="SignUpSelectField OptionsFontSize"
+                            [ngClass]="{ 'is-invalid': submitted && f.countryCode.errors }">
+                            <option value=" India">IN +91</option>
                             <option value="USA">USA +1</option>
                             <option value="UK">UK +10</option>
                         </select>
                         <input formControlName="phoneNumber" class="form-control form-control-lg SignUpPhoneNum"
-                            id="phoneNumber" name="phone" type="tel" placeholder="Phone Number" maxlength="10"
-                            pattern="[0-9]{3} [0-9]{3} [0-9]{4}">
-                        <small class="form-text text-danger"
-                            *ngIf="f.phoneNumber.errors.touched && f.phoneNumber.errors.required">
-                            Please enter Phone Number.!
-                        </small>
+                            type="tel" placeholder="Phone Number" maxlength="10" pattern="[0-9]{3} [0-9]{3} [0-9]{4}">
+                        <div *ngIf="submitted && f.phoneNumber.errors" class="invalid-feedback">
+                            <div *ngIf="f.phoneNumber.errors.required">Phone Number is required</div>
+                        </div>
                     </div>
                     <div class="form-group">
-                        <input formControlName="email" class="form-control form-control-lg SignUpInputField" id="email"
-                            type="email" name="email" placeholder="Enter Email">
-                        <small class="form-text text-danger"
-                            *ngIf="registerForm.controls.email.errors.email">
-                            Please enter valid email address.!
-                        </small>
-                        <small class="form-text text-danger"
-                            *ngIf="registerForm.controls.email.errors.required && registerForm.controls.email.errors.required ">
-                            Please Enter Email address. !
-                        </small>
+                        <input formControlName="email" class="form-control form-control-lg SignUpInputField"
+                            type="email" placeholder="Enter Email"
+                            [ngClass]="{ 'is-invalid': submitted && f.email.errors}">
+
+                        <div *ngIf=" submitted && f.email.errors" class="invalid-feedback">
+                            <div *ngIf="f.email.errors.required">Email is required</div>
+                            <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+                        </div>
                     </div>
                     <div class="form-group">
                         <input class="form-control form-control-lg SignUpInputField" formControlName="password"
-                            name="password" id="password" type='password' placeholder="Password">
+                            type='password' placeholder="Password">
+                        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
                             <div *ngIf="f.password.errors.required">Password is required</div>
-                        <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+                            <div *ngIf="f.password.errors.minlength">Password must be at least 8 characters</div>
+                        </div>
+
                     </div>
                     <div class="form-group">
                         <input formControlName="confirmPassword" class="form-control form-control-lg SignUpInputField"
-                            type='password' id="confirmPassword" name="confirmPassword" placeholder="Re-Enter Password">
-                        <small
-                        *ngIf="f.confirmPassword.errors.required">Confirm Password is required>
-                        <div *ngIf="f.confirmPassword.errors.mustMatch">Passwords must match</div></small>
+                            type="password" placeholder="Re-Enter Password"
+                            [ngClass]="{ 'is-invalid': submitted && f.confirmPassword.errors }">
+                        <div *ngIf="submitted && f.confirmPassword.errors" class="invalid-feedback">
+                            <div *ngIf="f.confirmPassword.errors.required">Confirm Password is required</div>
+                            <div *ngIf="f.confirmPassword.errors.mustMatch">Passwords must match</div>
+                        </div>
                     </div>
                     <div class="SignUpButton">
-                        <button  type="submit" class="">Sign Up</button>
+                        <button type="submit" class="">Sign Up</button>
                     </div>
                     <div class="SignUpOr">
                         (Or)
